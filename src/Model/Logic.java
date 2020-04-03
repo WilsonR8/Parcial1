@@ -52,6 +52,7 @@ public class Logic {
 		switch (i) {
 		case 'i': 
 			Collections.sort(movies);
+			System.out.println("hhhh");
 			break;
 		}
 	

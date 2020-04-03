@@ -27,10 +27,10 @@ public class Movies implements Comparable <Movies>{
 		app.text(this.name, posX + 50, posY);
 
 		app.text("Date", 190, 45);
-		app.text(this.date, posX + 150, posY);
+		app.text(this.date, posX + 160, posY);
 
 		app.text("Id", 280, 45);
-		app.text(this.id, posX + 200, posY);
+		app.text(this.id, posX + 250, posY);
 
 	}
 
@@ -103,7 +103,7 @@ public class Movies implements Comparable <Movies>{
 			this.id = id;
 		}
 
-		@Override
+		
 		public int compareTo(Movies mov) {
 			// TODO Auto-generated method stub
 			return rate.compareTo(mov.getRate());
