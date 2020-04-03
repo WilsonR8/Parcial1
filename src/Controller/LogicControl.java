@@ -21,5 +21,7 @@ public class LogicControl {
 	public void sortListController (char i) {
 		LogicControl.sortList(i);
 	}
+	
+	
 
 }

@@ -3,15 +3,16 @@ package Model;
 import processing.core.PApplet;
 
 public class Movies implements Comparable <Movies>{
-	private String name, date,id,rate;
+	private String name, date,id;
+	private int rate;
 	private int posX;
 	private int posY;
 	private PApplet app;
 
-	public Movies(String name, String date, String rate, String id, PApplet app) {
+	public Movies(String name, String date, int rate, String id, PApplet app) {
 		this.name = name;
 		this.date = date;
-		this.rate = rate;
+		this.rate=rate;
 		this.id = id;
 		this.posX = 30;
 		this.app = app;
@@ -47,11 +48,11 @@ public class Movies implements Comparable <Movies>{
 			this.name = name;
 		}
 
-		public String getRate() {
+		public int getRate() {
 			return rate;
 		}
 
-		public void setRate(String rate) {
+		public void setRate(int rate) {
 			this.rate=rate;
 		}
 
@@ -106,9 +107,8 @@ public class Movies implements Comparable <Movies>{
 		
 		public int compareTo(Movies mov) {
 			// TODO Auto-generated method stub
-			return rate.compareTo(mov.getRate());
+			return this.rate-mov.getRate();
 		}
 
-	
 	
 }

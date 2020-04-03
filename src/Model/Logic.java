@@ -10,7 +10,7 @@ public class Logic {
 	private String[] data1;
 	private String[] txtsplit1;
 	private LinkedList<Movies> movies;
-	private String rate;
+	private int rate;
 	private String name;
 	private String date;
 	private String id;
@@ -32,10 +32,10 @@ public class Logic {
 
 			name = txtsplit1[0];
 			date = txtsplit1[1];
-			rate = txtsplit1[2];
+			rate = Integer.parseInt (txtsplit1[2]);
 			id = txtsplit1[3];
 
-			movies.add(new Movies(name, date, rate, id, app));
+			movies.add(new Movies(name, date,rate, id, app));
 
 		}
 	}
@@ -55,7 +55,6 @@ public class Logic {
 			System.out.println("hhhh");
 			break;
 		}
-	
 
 }
 }

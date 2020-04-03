@@ -1,10 +1,14 @@
 package View;
 
+
+
 import Controller.LogicControl;
 import processing.core.PApplet;
 
 public class Main extends PApplet {
 
+	LogicControl control;
+	
 	LogicControl Paint;
 	LogicControl ListM;
 
@@ -18,6 +22,7 @@ public class Main extends PApplet {
 	}
 
 	public void setup() {
+		control = new LogicControl (this);
 		Paint = new LogicControl(this);
 		ListM = new LogicControl(this);
 	}
@@ -31,10 +36,7 @@ public class Main extends PApplet {
 	}
 
 	public void keyPressed() {
+		control.sortListController(key);
 
-			if (key == 'a' || key == 'A') {
-
-				
 	}
-			}
-	}
+}
